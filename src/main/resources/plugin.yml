@@ -1,0 +1,3 @@
+name: Plugin
+main: io.github.coderdojooss.BukkitPlugin
+version: 0.0.1
