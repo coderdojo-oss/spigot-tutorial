@@ -60,3 +60,8 @@ Zie het resultaat [pom.xml](/pom.xml)
 * `Run` > `Run as..` > `3 Maven build`
 * `Goals:` `package` invullen > `Run`
 * Het resultaat is een `.jar` bestand in de `target` folder
+
+## Stap 5: Implementeer de API
+TODO: uitwerken
+* [`io.github.coderdojooss.BukkitPlugin`](/src/main/java/io/github/coderdojooss/BukkitPlugin.java)
+* [`plugin.yml`](/src/main/resource/plugin.yml)
