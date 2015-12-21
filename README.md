@@ -18,14 +18,39 @@ Download en installeer het volgende
 * `Group id` naam volgens [package naamconventie](https://nl.wikipedia.org/wiki/Java_package)
 * `Artifact id` naam van dit project volgens de classe naamconventie, b.v. `Plugin` 
 
-## Stap 3: voeg Bukkit dependency toe
+## Stap 3: voeg de Bukkit dependency toe
 
 * Open `pom.xml` and open `pom.xml` tab to edit it
-* Voeg een blok `properties` toe om de java versie op 1.7 te zetten
+* Voeg een blok `<properties>` toe voor `</project>` om de java versie op 1.7 te zetten.
 
 ```xml
 <properties>
-	<maven.compiler.source>1.7</maven.compiler.source>
-	<maven.compiler.target>1.7</maven.compiler.target>
-  </properties>
+  <maven.compiler.source>1.7</maven.compiler.source>
+  <maven.compiler.target>1.7</maven.compiler.target>
+</properties>
 ``` 
+
+* Voeg een blok `<repositories>` toe voor `</project>` om de bukkit repository toe te voegen, hier zijn de bukkit dependencies op te downloaden.
+
+```xml
+<repositories>
+  <repository>
+    <id>bukkit-repo</id>
+    <url>http://repo.bukkit.org/content/groups/public/</url>
+  </repository>
+</repositories>
+``` 
+
+* Voeg een blok `<dependencies>` toe voor `</project>` om de bukkit dependency toe te voegen, dit is de daadwerkelijke bukkit API package. We voegen deze toe als `provided` omdat deze bij het runnen in de bukkit server aangeleverd wordt door bukkit.
+
+```xml
+<dependencies>
+  <dependency>
+   <groupId>org.bukkit</groupId>
+   <artifactId>bukkit</artifactId>
+   <version>1.7.9-R0.2</version>
+   <type>jar</type>
+   <scope>provided</scope>
+  </dependency>
+</dependencies>
+```
