@@ -15,13 +15,13 @@ Download en installeer het volgende
 * `File` > `New` > `New Maven Project`
 * check `Create simple project` 
 * `Next`
-* `Group id` naam volgens [package naamconventie](https://nl.wikipedia.org/wiki/Java_package)
+* `Group id` naam volgens [package naamconventie](https://nl.wikipedia.org/wiki/Java_package), b.v, `io.github.coderdojo-oss`
 * `Artifact id` naam van dit project volgens de classe naamconventie, b.v. `Plugin` 
 
 ## Stap 3: voeg de Bukkit dependency toe
 
-* Open `pom.xml` and open `pom.xml` tab to edit it
-* Voeg een blok `<properties>` toe voor `</project>` om de java versie op 1.7 te zetten.
+Open het `pom.xml` bestand en open het `pom.xml` tab om het te wijzigen.
+Voeg een blok `<properties>` toe voor `</project>` om de java versie op 1.7 te zetten.
 
 ```xml
 <properties>
@@ -30,7 +30,7 @@ Download en installeer het volgende
 </properties>
 ``` 
 
-* Voeg een blok `<repositories>` toe voor `</project>` om de bukkit repository toe te voegen, hier zijn de bukkit dependencies op te downloaden.
+Voeg een blok `<repositories>` toe voor `</project>` om de bukkit repository toe te voegen, hier zijn de bukkit dependencies op te downloaden.
 
 ```xml
 <repositories>
@@ -41,7 +41,7 @@ Download en installeer het volgende
 </repositories>
 ``` 
 
-* Voeg een blok `<dependencies>` toe voor `</project>` om de bukkit dependency toe te voegen, dit is de daadwerkelijke bukkit API package. We voegen deze toe als `provided` omdat deze bij het runnen in de bukkit server aangeleverd wordt door bukkit.
+Voeg een blok `<dependencies>` toe voor `</project>` om de bukkit dependency toe te voegen, dit is de daadwerkelijke bukkit API package. We voegen deze toe als `provided` omdat deze bij het runnen in de bukkit server aangeleverd wordt door bukkit.
 
 ```xml
 <dependencies>
