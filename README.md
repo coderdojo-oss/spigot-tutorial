@@ -64,4 +64,4 @@ Zie het resultaat [pom.xml](/pom.xml)
 ## Stap 5: Implementeer de API
 TODO: uitwerken
 * [`io.github.coderdojooss.BukkitPlugin`](/src/main/java/io/github/coderdojooss/BukkitPlugin.java)
-* [`plugin.yml`](/src/main/resource/plugin.yml)
+* [`plugin.yml`](/src/main/resources/plugin.yml)
