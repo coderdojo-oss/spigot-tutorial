@@ -53,10 +53,10 @@ Voeg een blok `<dependencies>` toe voor `</project>` om de bukkit dependency toe
   </dependency>
 </dependencies>
 ```
+Zie het resultaat [pom.xml](/pom.xml)
 
 ## Stap 4: Bouw het project
 * Selecteer het project
 * `Run` > `Run as..` > `3 Maven build`
 * `Goals:` `package` invullen > `Run`
 * Het resultaat is een `.jar` bestand in de `target` folder
-* Dit bestand kun je plaatsen in de `plugins` folder van je Bukkit server
