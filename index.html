@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Craftbukkit-tutorial by coderdojo-oss</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Craftbukkit-tutorial</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://github.com/coderdojo-oss/craftbukkit-tutorial" class="btn">View on GitHub</a>
+      <a href="https://github.com/coderdojo-oss/craftbukkit-tutorial/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/coderdojo-oss/craftbukkit-tutorial/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="craftbukkit-tutorial" class="anchor" href="#craftbukkit-tutorial" aria-hidden="true"><span class="octicon octicon-link"></span></a>Craftbukkit tutorial</h1>
+
+<p>Deze tutorial is samengesteld uit een minecraft workshop van <a href="https://java4kids.java.net/minecraft-workshop/mar2013">Java4Kids</a> en de <a href="http://wiki.bukkit.org/Plugin_Tutorial">Plugin Tutorial</a> van Bukkit</p>
+
+<h2>
+<a id="stap-1-installeer" class="anchor" href="#stap-1-installeer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stap 1: installeer</h2>
+
+<p>Download en installeer het volgende</p>
+
+<ul>
+<li>
+<a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html">Java JDK 7+</a> </li>
+<li><a href="https://eclipse.org/downloads/">Eclipse for Java Developers</a></li>
+</ul>
+
+<h2>
+<a id="stap-2-maak-een-project" class="anchor" href="#stap-2-maak-een-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stap 2: maak een Project</h2>
+
+<ul>
+<li>Start Eclipse</li>
+<li>Kies een workspace folder (meestal ergens in je gebruikers Documents directory)</li>
+<li>
+<code>File</code> &gt; <code>New</code> &gt; <code>New Maven Project</code>
+</li>
+<li>check <code>Create simple project</code> </li>
+<li><code>Next</code></li>
+<li>
+<code>Group id</code> naam volgens <a href="https://nl.wikipedia.org/wiki/Java_package">package naamconventie</a>, b.v, <code>io.github.coderdojo-oss</code>
+</li>
+<li>
+<code>Artifact id</code> naam van dit project volgens de classe naamconventie, b.v. <code>Plugin</code> </li>
+</ul>
+
+<h2>
+<a id="stap-3-voeg-de-bukkit-dependency-toe" class="anchor" href="#stap-3-voeg-de-bukkit-dependency-toe" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stap 3: voeg de Bukkit dependency toe</h2>
+
+<p>Open het <code>pom.xml</code> bestand en open het <code>pom.xml</code> tab om het te wijzigen.
+Voeg een blok <code>&lt;properties&gt;</code> toe voor <code>&lt;/project&gt;</code> om de java versie op 1.7 te zetten.</p>
+
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">properties</span>&gt;
+  &lt;<span class="pl-ent">maven</span>.compiler.source&gt;1.7&lt;/<span class="pl-ent">maven</span>.compiler.source&gt;
+  &lt;<span class="pl-ent">maven</span>.compiler.target&gt;1.7&lt;/<span class="pl-ent">maven</span>.compiler.target&gt;
+&lt;/<span class="pl-ent">properties</span>&gt;</pre></div>
+
+<p>Voeg een blok <code>&lt;repositories&gt;</code> toe voor <code>&lt;/project&gt;</code> om de bukkit repository toe te voegen, hier zijn de bukkit dependencies op te downloaden.</p>
+
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">repositories</span>&gt;
+  &lt;<span class="pl-ent">repository</span>&gt;
+    &lt;<span class="pl-ent">id</span>&gt;bukkit-repo&lt;/<span class="pl-ent">id</span>&gt;
+    &lt;<span class="pl-ent">url</span>&gt;http://repo.bukkit.org/content/groups/public/&lt;/<span class="pl-ent">url</span>&gt;
+  &lt;/<span class="pl-ent">repository</span>&gt;
+&lt;/<span class="pl-ent">repositories</span>&gt;</pre></div>
+
+<p>Voeg een blok <code>&lt;dependencies&gt;</code> toe voor <code>&lt;/project&gt;</code> om de bukkit dependency toe te voegen, dit is de daadwerkelijke bukkit API package. We voegen deze toe als <code>provided</code> omdat deze bij het runnen in de bukkit server aangeleverd wordt door bukkit.</p>
+
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">dependencies</span>&gt;
+  &lt;<span class="pl-ent">dependency</span>&gt;
+   &lt;<span class="pl-ent">groupId</span>&gt;org.bukkit&lt;/<span class="pl-ent">groupId</span>&gt;
+   &lt;<span class="pl-ent">artifactId</span>&gt;bukkit&lt;/<span class="pl-ent">artifactId</span>&gt;
+   &lt;<span class="pl-ent">version</span>&gt;1.7.9-R0.2&lt;/<span class="pl-ent">version</span>&gt;
+   &lt;<span class="pl-ent">type</span>&gt;jar&lt;/<span class="pl-ent">type</span>&gt;
+   &lt;<span class="pl-ent">scope</span>&gt;provided&lt;/<span class="pl-ent">scope</span>&gt;
+  &lt;/<span class="pl-ent">dependency</span>&gt;
+&lt;/<span class="pl-ent">dependencies</span>&gt;</pre></div>
+
+<p>Zie het resultaat <a href="/pom.xml">pom.xml</a></p>
+
+<h2>
+<a id="stap-4-bouw-het-project" class="anchor" href="#stap-4-bouw-het-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stap 4: Bouw het project</h2>
+
+<ul>
+<li>Selecteer het project</li>
+<li>
+<code>Run</code> &gt; <code>Run as..</code> &gt; <code>3 Maven build</code>
+</li>
+<li>
+<code>Goals:</code> <code>package</code> invullen &gt; <code>Run</code>
+</li>
+<li>Het resultaat is een <code>.jar</code> bestand in de <code>target</code> folder</li>
+</ul>
+
+<h2>
+<a id="stap-5-implementeer-de-api" class="anchor" href="#stap-5-implementeer-de-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>Stap 5: Implementeer de API</h2>
+
+<p>TODO: uitwerken</p>
+
+<ul>
+<li><a href="/src/main/java/io/github/coderdojooss/BukkitPlugin.java"><code>io.github.coderdojooss.BukkitPlugin</code></a></li>
+<li><a href="/src/main/resources/plugin.yml"><code>plugin.yml</code></a></li>
+</ul>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/coderdojo-oss/craftbukkit-tutorial">Craftbukkit-tutorial</a> is maintained by <a href="https://github.com/coderdojo-oss">coderdojo-oss</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
