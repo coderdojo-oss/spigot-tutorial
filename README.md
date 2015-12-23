@@ -102,4 +102,4 @@ main: io.github.coderdojooss.BukkitPlugin
 version: 0.0.1
 ```
 
-Bouw het project zoals in Stap 4 beschreven. De `jar` uit de target folder is nu te plaatsen in de plugins folder van je Bukkit server. Bij het starten van je Bukkit server zie je nu een stukjes logging voorbij komen waarin staat dat jouw Plugin wordt geladen en de tekst die aan de info methode van de Logger is gevoerd (`onEnable; ik ben geladen`).
+Bouw het project zoals in Stap 4 beschreven. De `jar` uit de target folder is nu te plaatsen in de plugins folder van je Bukkit server. Bij het starten van je Bukkit server zie je nu een stukjes logging voorbij komen waarin staat dat jouw Plugin wordt geladen en de tekst die aan de info methode van de Logger is gevoerd: `onEnable; ik ben geladen`
