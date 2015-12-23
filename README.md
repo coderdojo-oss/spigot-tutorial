@@ -15,7 +15,7 @@ Download en installeer het volgende
 * check `Create simple project` 
 * `Next`
 * `Group id` naam volgens [package naamconventie](https://nl.wikipedia.org/wiki/Java_package), b.v, `io.github.coderdojo-oss`
-* `Artifact id` naam van dit project volgens de classe naamconventie, b.v. `Plugin` 
+* `Artifact id` naam van dit project volgens de klasse naamconventie, b.v. `Plugin` 
 
 ## Stap 3: voeg de Bukkit dependency toe
 
@@ -62,6 +62,44 @@ Zie het resultaat [pom.xml](/pom.xml)
 * Het resultaat is een `.jar` bestand in de `target` folder
 
 ## Stap 5: Implementeer de API
-TODO: uitwerken
-* [`io.github.coderdojooss.BukkitPlugin`](/src/main/java/io/github/coderdojooss/BukkitPlugin.java)
-* [`plugin.yml`](/src/main/resources/plugin.yml)
+Als eerste verwacht Bukkit een hoofdklasse die extend van de `JavaPlugin`
+
+* `File` > `New` > `Class` 
+* Package: `io.github.coderdojo-oss`
+* Name: `BukkitPlugin`
+* Superclass: `JavaPlugin` > `Browse...` en selecteer de enige gevonden class `Ok` > `Finish`
+
+Nu hebben we een class die er als volgt uit ziet
+
+```java
+package io.github.coderdojooss;
+
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class BukkitPlugin extends JavaPlugin {
+
+}
+```
+
+In de klasse zelf (tussen de `{` en `}`) kunnen we methodes implementeren van JavaPlugin uit de Bukkit API. 
+
+* `rechtermuis` > `Source` > `Override/Implement methods...` 
+* Deselecteer alles en selecteer van `JavaPlugin` de methode `onEnable` 
+* Vervang de TODO tekst in deze methode met `getLogger().info("onEnable; ik ben geladen");`
+
+Het resultaat is hier te vinden in [BukkitPlugin.java](/src/main/java/io/github/coderdojooss/BukkitPlugin.java):
+
+Als tweede verwacht Bukkit een `plugin.yml` bestand aan de root in de plugin jar. De conventie van Maven is om dergelijk niet Java bestanden te plaatsen in de folder `src/main/resources`. 
+* `File` > `New` > `File` 
+* selecteer `src/main/resources` 
+* File name: `plugin.yml` > `Finish`
+
+Bukkit verwacht de volgende inhoud:
+
+```yml
+name: Plugin
+main: io.github.coderdojooss.BukkitPlugin
+version: 0.0.1
+```
+
+Bouw het project zoals in Stap 4 beschreven. De `jar` uit de target folder is nu te plaatsen in de plugins folder van je Bukkit server.
