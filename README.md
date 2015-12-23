@@ -5,7 +5,7 @@ Deze tutorial is samengesteld uit een minecraft workshop van [Java4Kids](https:/
 Download en installeer het volgende
 
 * [Java JDK 7+](https://www.oracle.com/technetwork/java/javase/downloads/index.html) 
-* [Eclipse for Java Developers](https://eclipse.org/downloads/)
+* [Eclipse IDE for Java Developers](https://eclipse.org/downloads/)
 
 ## Stap 2: maak een Project
 
