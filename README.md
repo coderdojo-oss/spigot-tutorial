@@ -103,3 +103,9 @@ version: 0.0.1
 ```
 
 Bouw het project zoals in Stap 4 beschreven. De `jar` uit de target folder is nu te plaatsen in de plugins folder van je Bukkit server. Bij het starten van je Bukkit server zie je nu een stukjes logging voorbij komen waarin staat dat jouw Plugin wordt geladen en de tekst die aan de info methode van de Logger is gevoerd: `onEnable; ik ben geladen`
+
+## Mogelijke vervolgstappen
+
+* [http://wiki.bukkit.org/Plugin_Tutorial/nl#Handling_Reloads]
+* [http://wiki.bukkit.org/Plugin_Tutorial/nl#Commands]
+* [http://wiki.bukkit.org/Event_API_Reference]
