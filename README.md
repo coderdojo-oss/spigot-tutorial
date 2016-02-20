@@ -65,7 +65,7 @@ Zie het resultaat [pom.xml](/pom.xml)
 Als eerste verwacht Bukkit een hoofdklasse die extend van de `JavaPlugin`
 
 * `File` > `New` > `Class` 
-* Package: `io.github.coderdojo-oss`
+* Package: `io.github.coderdojooss`
 * Name: `BukkitPlugin`
 * Superclass: `JavaPlugin` > `Browse...` en selecteer de enige gevonden class `Ok` > `Finish`
 
