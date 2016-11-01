@@ -1,3 +1,3 @@
-name: Plugin
-main: io.github.coderdojooss.BukkitPlugin
+name: MijnPlugin
+main: io.github.coderdojooss.MijnPlugin
 version: 0.0.1

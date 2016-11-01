@@ -2,10 +2,10 @@ package io.github.coderdojooss;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class BukkitPlugin extends JavaPlugin {
+public class MijnPlugin extends JavaPlugin {
 
 	@Override
 	public void onEnable() {
-		getLogger().info("onEnable; ik ben geladen");
+		getLogger().info("ik is hier");
 	}
 }
