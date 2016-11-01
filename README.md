@@ -131,3 +131,4 @@ je kunt nu inloggen vanuit minecraft op `localhost`
 * [https://www.spigotmc.org/wiki/using-the-event-api/]
 * [https://www.spigotmc.org/wiki/create-a-simple-command/]
 * [https://www.spigotmc.org/wiki/recipe-example/]
+* [https://github.com/devoxx4kids/materials/blob/master/workshops/minecraft/readme-spigot.asciidoc]
