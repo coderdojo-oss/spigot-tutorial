@@ -15,7 +15,7 @@ Download en installeer het volgende
 * `File` > `New` > `New Maven Project`
 * check `Create simple project` 
 * `Next`
-* `Group id` naam volgens [package naamconventie](https://nl.wikipedia.org/wiki/Java_package), b.v, `io.github.coderdojo-oss`
+* `Group id` naam volgens [package naamconventie](https://nl.wikipedia.org/wiki/Java_package), b.v, `io.github.coderdojooss`
 * `Artifact id` naam van dit project volgens de klasse naamconventie, b.v. `MijnPlugin` 
 
 ## Stap 3: voeg de Spigot dependency toe
@@ -128,6 +128,6 @@ je kunt nu inloggen vanuit minecraft op `localhost`
 
 ## Mogelijke vervolgstappen
 
-* [http://wiki.bukkit.org/Plugin_Tutorial/nl#Handling_Reloads]
-* [http://wiki.bukkit.org/Plugin_Tutorial/nl#Commands]
-* [http://wiki.bukkit.org/Event_API_Reference]
+* [https://www.spigotmc.org/wiki/using-the-event-api/]
+* [https://www.spigotmc.org/wiki/create-a-simple-command/]
+* [https://www.spigotmc.org/wiki/recipe-example/]
