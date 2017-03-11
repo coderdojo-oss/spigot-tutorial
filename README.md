@@ -132,3 +132,13 @@ je kunt nu inloggen vanuit minecraft op `localhost`
 * [https://www.spigotmc.org/wiki/create-a-simple-command/]
 * [https://www.spigotmc.org/wiki/recipe-example/]
 * [https://github.com/devoxx4kids/materials/blob/master/workshops/minecraft/readme-spigot.asciidoc]
+
+## Ore Mushrooms
+[https://github.com/devoxx4kids/materials/blob/master/workshops/minecraft/readme-spigot.asciidoc#ore-shrooms]
+
+## Cat Arrows
+[https://github.com/devoxx4kids/materials/blob/master/workshops/minecraft/readme-spigot.asciidoc#cat-arrows]
+
+## Arrow Teleport
+Schiet een arrow op iets en teleport jezelf naar die locatie.
+
