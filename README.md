@@ -5,7 +5,7 @@ Deze tutorial was van origine samengesteld uit een minecraft workshop van [Java4
 Download en installeer het volgende
 
 * [Java JDK 8+](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 
-* [Eclipse IDE for Java Developers](http://www.eclipse.org/downloads/packages/eclipse-ide-java-developers/neon1a)
+* [Eclipse IDE for Java Developers](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/oxygen2)
 * [Spigot Server 1.10.2](https://ci.mcadmin.net/job/Spigot/lastSuccessfulBuild/artifact/spigot-1.10.2.jar)
 
 ## Stap 2: maak een Project
