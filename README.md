@@ -49,14 +49,14 @@ Voeg een blok `<dependencies>` toe voor `</project>` om de spigot dependency toe
     <dependency>
            <groupId>org.spigotmc</groupId>
            <artifactId>spigot-api</artifactId>
-           <version>1.10.2-R0.1-SNAPSHOT</version>
+           <version>1.12.2-R0.1-SNAPSHOT</version>
            <scope>provided</scope>
     </dependency>
     <!--Bukkit API-->
     <dependency>
             <groupId>org.bukkit</groupId>
             <artifactId>bukkit</artifactId>
-            <version>1.10.2-R0.1-SNAPSHOT</version>
+            <version>1.12.2-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
     </dependency>
 </dependencies>
