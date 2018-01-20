@@ -6,7 +6,7 @@ Download en installeer het volgende
 
 * [Java JDK 8+](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) 
 * [Eclipse IDE for Java Developers](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/oxygen2)
-* [Spigot Server 1.10.2](https://ci.mcadmin.net/job/Spigot/lastSuccessfulBuild/artifact/spigot-1.10.2.jar)
+* [Spigot](https://getbukkit.org/download/spigot)
 
 ## Stap 2: maak een Project
 
